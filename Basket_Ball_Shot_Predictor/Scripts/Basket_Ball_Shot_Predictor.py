@@ -63,13 +63,13 @@ while True:
                     cv2.line(imgContours, (cx,cy), (posListX[i-1], posListY[i-1]), (0,255,0),3)
                 
                 # poslist consist of the previous coordinate of cx,cy ball.
-                #print(cx,cy, posList[i-1])
+                # print(cx,cy, posList[i-1])
             
             for x in xList:
                 y = int(A * x ** 2 + B * x + C)
                 cv2.circle(imgContours, (x,y), 2, (255,0,255), cv2.FILLED)
             cv2.putText(imgContours, ("Projection :" + str(y)), (10,50),cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 4)
-
+ 
         '''Display'''
         imgContours = cv2.resize(imgContours, (0,0), None, 0.7,0.7)
         #cv2.imshow("Result",img)
